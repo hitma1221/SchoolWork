@@ -1,0 +1,53 @@
+#lang racket
+
+(define duple
+  (lambda (a b)
+    (if (eq? a 0) '()
+        (cons b (duple (- a 1) b)))))
+
+(define exist?
+  (lambda (pred lst)
+    (cond
+      ((null? lst) #f)
+      ((pred (car lst)) #t)
+      ((not (pred (car lst))) (exist? pred (cdr lst)))
+      (else #f))))
+      
+(define every?
+  (lambda (pred lst)
+    (cond
+      ((null? lst) #t)
+      ((pred (car lst)) (every? pred (cdr lst)))
+      (else #f))))
+
+(define down
+  (lambda (lst)
+    (cond
+        ((null? lst) '())
+        (else (cons (cons (car lst) '()) (down (cdr lst)))))))
+
+;(define product
+ ; (lambda (lst los)
+  ;  (cond
+   ;   ((null? lst) '())
+    ;  ((null? los) '())
+     ; ((not (null? (cdr los))) (cons (car los) (     )))
+
+(define cart-prod
+  (lambda (s1 s2)
+    (cons s1 (cons s2 '()))))
+
+(define map-cart
+  (lambda (s1 lst)
+    (cond
+      ((null? lst) '())
+      (else (cons (car lst) (cons (cons s1 '()) (map-cart s1 (cdr lst))))))))    
+        
+
+(define swapper
+  (lambda (s1 s2 lst)
+    (cond
+      ((null? lst) '())
+      ((eq? (car lst) s1) (cons s2 (swapper s1 s2 (cdr lst))))
+      ((eq? (car lst) s2) (cons s1 (swapper s1 s2 (cdr lst))))
+      (else (cons (car lst) (swapper s1 s2 (cdr lst)))))))
