@@ -7,9 +7,9 @@ City varchar(255)
 );
 
 ALTER TABLE Person
-ADD PersonID 1234,
-ADD PersonID 1024,
-ADD PersonID 34;
+ADD PersonID '1234',
+ADD PersonID '1024',
+ADD PersonID '34';
 
 SELECT PersonID
 FROM Person;
