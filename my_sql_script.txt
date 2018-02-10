@@ -1,8 +1,10 @@
 CREATE TABLE Person(
+	LastName varchar(255),
+	FirstName varchar(255)
 );
 
-ALTER TABLE Person
-ADD PersonID 1234;
+INSERT INTO Person(LastName,FirstName)
+VALUES('Holden','Josh');
 
 SELECT PersonID
 FROM Person;
