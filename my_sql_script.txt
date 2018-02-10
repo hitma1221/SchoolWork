@@ -6,5 +6,5 @@ CREATE TABLE Person(
 INSERT INTO Person(LastName,FirstName)
 VALUES('Holden','Josh');
 
-SELECT PersonID
+SELECT LastName
 FROM Person;
