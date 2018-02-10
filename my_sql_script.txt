@@ -1,0 +1,15 @@
+MAKE TABLE Person(
+	PersonID int,
+	LastName varchar(255),
+	FirstName varchar(255),
+	Address varchar(255),
+	City varchar(255)
+);
+
+ALTER TABLE Person
+ADD PersonID 1234,
+ADD PersonID 1024,
+ADD PersonID 34;
+
+SELECT PersonID
+FROM Person;
