@@ -48,7 +48,7 @@ CREATE TABLE deans_list(
 	studentnum int,
 	semester varchar(255),
 	PRIMARY KEY(studentnum, semester),
-	FOREIGN KEY(studentnum) REFERENCES Student
+	FOREIGN KEY(studentnum) REFERENCES Student,
 	FOREIGN KEY(studentnum, semester) REFERENCES Taking
 );
 
