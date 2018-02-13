@@ -6,7 +6,7 @@ CREATE TABLE Instructor(
 );
 
 CREATE TABLE Class(
-	schedulenum varchar(255),
+	schedulenum int,
 	semester varchar(255),
 	department varchar(255),
 	num int,
@@ -20,7 +20,7 @@ CREATE TABLE Class(
 CREATE TABLE Teaches(
 	name varchar(255),
 	schedulenum int,
-	semester int,
+	semester varchar(255),
 	PRIMARY KEY(schedulenum, semester),
 	FOREIGN KEY(name) REFERENCES Instructor,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
@@ -31,12 +31,12 @@ CREATE TABLE Student(
 	name varchar(255),
 	standing int,
 	gpa int,
-	PRIMARY KEY(name, studentnum)
+	PRIMARY KEY(studentnum)
 );
 
 CREATE TABLE Taking(
 	studentnum varchar(255),
-	schedulenum varchar(255),
+	schedulenum int,
 	semester varchar(255),
 	grade varchar(255),
 	PRIMARY KEY(studentnum, schedulenum, semester),
