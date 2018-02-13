@@ -39,9 +39,17 @@ CREATE TABLE Taking(
 	schedulenum int,
 	semester varchar(255),
 	grade varchar(255),
-	PRIMARY KEY(studentnum, schedulenum, semester),
+	PRIMARY KEY(studentnum, semester),
 	FOREIGN KEY(studentnum) REFERENCES Student,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
+);
+
+CREATE TABLE deans_list(
+	studentnum int,
+	semester varchar(255),
+	PRIMARY KEY(studentnum, semester),
+	FOREIGN KEY(studentnum) REFERENCES Student
+	FOREIGN KEY(studentnum, semester) REFERENCES Taking
 );
 
 
