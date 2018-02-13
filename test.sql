@@ -2,7 +2,6 @@ CREATE TABLE Instructor(
 	name varchar(255),
 	department varchar(255),
 	office varchar(255),
-
 	PRIMARY KEY(name)
 );
 
@@ -15,7 +14,6 @@ CREATE TABLE Class(
 	time varchar(255),
 	place varchar(255),
 	enrollment varchar(255),
-
 	PRIMARY KEY(schedulenum, semester)
 );
 
@@ -23,7 +21,6 @@ CREATE TABLE Teaches(
 	name varchar(255),
 	schedulenum int,
 	semester int,
-
 	PRIMARY KEY(schedulenum, semester),
 	FOREIGN KEY(name) REFERENCES Instructor,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
@@ -34,7 +31,6 @@ CREATE TABLE Student(
 	name varchar(255),
 	standing int,
 	gpa int,
-
 	PRIMARY KEY(name, studentnum)
 );
 
@@ -43,7 +39,6 @@ CREATE TABLE Taking(
 	schedulenum varchar(255),
 	semester varchar(255),
 	grade varchar(255),
-
 	PRIMARY KEY(studentnum, schedulenum, semester),
 	FOREIGN KEY(studentnum) REFERENCES Student,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
