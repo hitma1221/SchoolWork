@@ -35,7 +35,7 @@ CREATE TABLE Student(
 );
 
 CREATE TABLE Taking(
-	studentnum varchar(255),
+	studentnum int,
 	schedulenum int,
 	semester varchar(255),
 	grade varchar(255),
