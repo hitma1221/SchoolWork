@@ -52,6 +52,10 @@ CREATE TABLE deans_list(
 	FOREIGN KEY(studentnum, semester) REFERENCES Taking
 );
 
+ALTER TABLE Student
+ADD address varchar(255);
+
+DELETE FROM Student;
 
 INSERT INTO Instructor(name)
 VALUES('Blum');
