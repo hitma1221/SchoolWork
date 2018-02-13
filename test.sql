@@ -50,8 +50,8 @@ CREATE TABLE Taking(
 );
 
 
-INSERT INTO Person(LastName,FirstName)
-VALUES('Holden','Josh');
+INSERT INTO Instructor(name)
+VALUES('Blum');
 
-SELECT LastName
-FROM Person;
+SELECT name
+FROM Instructor;
