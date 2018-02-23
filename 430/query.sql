@@ -5,5 +5,5 @@ with test as
 	  group by studentnum)
 	select name, max(newcount)
 	from student,test
-	where newcount >= (selext max(count)
+	where newcount >= (select max(count)
 						from test);
