@@ -30,7 +30,7 @@ CREATE TABLE Student(
 	studentnum int,
 	name varchar(255),
 	standing int,
-	gpa float,
+	gpa real,
 	PRIMARY KEY(studentnum)
 );
 
