@@ -44,11 +44,11 @@ CREATE TABLE Taking(
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
 );
 
-INSERT INTO Instructor(name, department, office) VALUES('Jeremy Blum', 'CMPSCI', 'W255');
-INSERT INTO Instructor(name, department, office) VALUES('Sukmoon Chang', 'CMPSCI', 'W255');
-INSERT INTO Instructor(name, department, office) VALUES('Linda Null', 'CMPSCI', 'W255');
-INSERT INTO Instructor(name, department, office) VALUES('Hyuntae Na', 'CMPSCI', 'W255');
-INSERT INTO Instructor(name, department, office) VALUES('Justin Keller', 'Math', 'W255');
+INSERT INTO Instructor(name, department, office) VALUES('Jeremy Blum', 'CMPSCI', 'Olmstead');
+INSERT INTO Instructor(name, department, office) VALUES('Sukmoon Chang', 'CMPSCI', 'Olmstead');
+INSERT INTO Instructor(name, department, office) VALUES('Linda Null', 'CMPSCI', 'EAB');
+INSERT INTO Instructor(name, department, office) VALUES('Hyuntae Na', 'CMPSCI', 'SEC');
+INSERT INTO Instructor(name, department, office) VALUES('Justin Keller', 'Math', 'Olmstead');
 
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
 VALUES(123, 'Spring', 'CMPSCI', 430, 'T/Th', '1:35', 'EAB', 'Enrolled');
