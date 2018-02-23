@@ -1,3 +1,3 @@
-select name
+select distinct *
 from student, taking, class
-where class.department = 'CMPSCI' and class.num = 430;
+where department = 'CMPSCI' and num = 430;
