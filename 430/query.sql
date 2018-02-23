@@ -24,4 +24,4 @@ from student
 where standing = (select standing
 					from student
 					where name = 'Joshua Holden')
-order by name desc;
+order by name asc;
