@@ -6,4 +6,5 @@ with test as
 	select name, max(count)
 	from student,test
 	where count >= (select max(count)
-						from test);
+						from test)
+	group by name;
