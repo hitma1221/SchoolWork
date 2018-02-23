@@ -1,6 +1,6 @@
-select schedulenum, semester, avg(grade)
-from taking
-where schedulenum in (select schedulenum
-					  from class
-					  where num = 430 and department = 'CMPSCI')
-group by schedulenum, semester;
+select name
+from student
+where studentnum = (select studentnum, count(schedulenum)
+					from taking
+					where count(schedulenum) = max(count(schedulenum)));
+						
