@@ -38,7 +38,7 @@ CREATE TABLE Taking(
 	studentnum int,
 	schedulenum int,
 	semester varchar(255),
-	grade varchar(255),
+	grade real,
 	PRIMARY KEY(studentnum, schedulenum, semester),
 	FOREIGN KEY(studentnum) REFERENCES Student,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
@@ -75,18 +75,18 @@ INSERT INTO Student(studentnum, name, standing, gpa) VALUES(3, 'Jakub Grzegorgow
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(4, 'Neil Pasricha', 7, 2.9);
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(5, 'Abderrazzak Asmaayni', 8, 3.5);
 
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'Spring', 'A++');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 124, 'Spring', 'B');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 126, 'Spring', 'B+');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 127, 'Spring', 'A-');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 123, 'Spring', 'F');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 124, 'Spring', 'F');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 126, 'Spring', 'F+');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'Spring', 'C-');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spring', 'D');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'B+');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'C+');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'Spring', 'D-');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'Spring', 1.5);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 124, 'Spring', 2.1);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 126, 'Spring', 3.7);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 127, 'Spring', 2.4);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 123, 'Spring', 0.2);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 124, 'Spring', 1.3);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 126, 'Spring', 2.3);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'Spring', 2.5);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spring', 3.3);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 2.4);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 4.0);
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'Spring', 1.4);
 /*
 DROP TABLE Taking;
 DROP TABLE Student;
