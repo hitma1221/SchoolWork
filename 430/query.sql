@@ -1,4 +1,6 @@
-
+select name
+from student
+where EXISTS(
 SELECT name
 FROM Student stud
 where studentnum not in
@@ -8,7 +10,7 @@ where studentnum not in
 				where schedulenum in 
 					(select schedulenum
 					 from class
-					 where num = 430 and department = 'CMPSCI'));
+					 where num = 430 and department = 'CMPSCI')));
 					
 /*select name
 from student
