@@ -7,5 +7,5 @@ with test as
 	from student, test
 	where classcount >= (select max(classcount)
 						from test)
-	and student.studentnum = takes.studentnum
+	and student.studentnum = test.studentnum
 	group by name;
