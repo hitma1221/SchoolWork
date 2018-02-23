@@ -21,7 +21,7 @@ CREATE TABLE Teaches(
 	name varchar(255),
 	schedulenum int,
 	semester varchar(255),
-	PRIMARY KEY(schedulenum, semester),
+	PRIMARY KEY(name, schedulenum, semester),
 	FOREIGN KEY(name) REFERENCES Instructor,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
 );
@@ -39,26 +39,13 @@ CREATE TABLE Taking(
 	schedulenum int,
 	semester varchar(255),
 	grade varchar(255),
-	PRIMARY KEY(studentnum, semester),
+	PRIMARY KEY(studentnum, schedulenum, semester),
 	FOREIGN KEY(studentnum) REFERENCES Student,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
 );
 
-CREATE TABLE deans_list(
-	studentnum int,
-	semester varchar(255),
-	PRIMARY KEY(studentnum, semester),
-	FOREIGN KEY(studentnum) REFERENCES Student,
-	FOREIGN KEY(studentnum, semester) REFERENCES Taking
-);
-
-ALTER TABLE Student
-ADD address varchar(255);
-
-DELETE FROM Student;
-
-INSERT INTO Instructor(name)
-VALUES('Blum');
+INSERT INTO Instructor(name, department, office)
+VALUES('Jeremy Blum', 'CMPSCI', 'W255');
 
 SELECT name
 FROM Instructor;
