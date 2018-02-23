@@ -4,7 +4,7 @@ with test as
 	  where semester = 'Spring'
 	  group by studentnum)
 	select name, max(classcount)
-	from student, takes
+	from student, test
 	where classcount >= (select max(classcount)
 						from test)
 	and student.studentnum = takes.studentnum
