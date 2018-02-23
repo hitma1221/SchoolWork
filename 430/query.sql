@@ -3,7 +3,8 @@ from student
 where EXISTS(
 			SELECT name
 			FROM Student stud
-			where stud.studentnum not in
+			where student.studentnum = stud.studentnum 
+			and stud.studentnum not in
 				(
 				select studentnum
 				from taking
