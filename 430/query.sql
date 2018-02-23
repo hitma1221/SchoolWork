@@ -25,7 +25,12 @@ select name, department
 from instructor
 where office = 'Olmstead';
 */
+/* PROBLEM H
 select name, standing
 from student
 where gpa = (select max(gpa)
 			from student);
+*/
+Select count(name)
+from students
+where gpa > 3;

@@ -30,7 +30,7 @@ CREATE TABLE Student(
 	studentnum int,
 	name varchar(255),
 	standing int,
-	gpa int,
+	gpa float,
 	PRIMARY KEY(studentnum)
 );
 
@@ -84,7 +84,7 @@ INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'Spr
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spring', 'D');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'B+');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'C+');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 127, 'Spring', 'D-');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'Spring', 'D-');
 /*
 DROP TABLE Taking;
 DROP TABLE Student;
