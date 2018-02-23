@@ -1,7 +1,6 @@
 SELECT name
 				FROM Student stud
-				where student.studentnum = stud.studentnum and 
-				studentnum in
+				where studentnum in
 				(select studentnum
 					from taking
 					where schedulenum in 
