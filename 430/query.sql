@@ -7,6 +7,7 @@ where studentnum in (select studentnum
 										 from class
 										 where num = 430 and department = 'CMPSCI' and year = '2018'));
 */
+/*
 select name, standing
 from student
 MINUS
@@ -17,3 +18,10 @@ where studentnum in (select studentnum
 					where schedulenum in (select schedulenum
 						 				  from teaches
 						 				  where name != 'Linda Null' or name != 'Jeremy Blum'));
+*/
+select name
+from student
+where standing = (select standing
+					from student
+					where name = 'Joshua Holden')
+order by desc;
