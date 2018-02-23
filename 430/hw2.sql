@@ -45,7 +45,8 @@ CREATE TABLE Taking(
 );
 
 INSERT INTO Instructor(name, department, office)
-VALUES('Jeremy Blum', 'CMPSCI', 'W255');
+VALUES('Jeremy Blum', 'CMPSCI', 'W255'),
+VALUES('Sukmoon Chang', 'CMPSCI', 'W255');
 
 SELECT name
 FROM Instructor;
