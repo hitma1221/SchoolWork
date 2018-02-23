@@ -1,10 +1,10 @@
 with test as 
-	(select studentnum, count(schedulenum) as count
+	(select studentnum, count(schedulenum)
 	  from taking
 	  where semester = 'Spring'
-	  group by studentnum)
-	select name, max(count)
+	  group by studentnum)as classcount
+	select name, max(classcount)
 	from student,test
-	where count >= (select max(count)
+	where classcount >= (select max(classcount)
 						from test)
 	group by name;
