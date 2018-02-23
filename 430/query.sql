@@ -1,6 +1,9 @@
-select schedulenum
+select studentnum
+from taking
+where schedulenum not in 
+					(select schedulenum
 					 from class
-					 where num = 430 and department = 'CMPSCI';
+					 where num = 430 and department = 'CMPSCI');
 					 /*
 SELECT name
 				FROM Student stud
