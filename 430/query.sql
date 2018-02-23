@@ -1,7 +1,9 @@
 select name
 from student
-where studentnum = (select studentnum, count(schedulenum)
+where studentnum = (select studentnum
 					from taking
-					where count(schedulenum) = max(count(schedulenum))
-					group by studentnum);
+					where max(
+						(select count(schedulenum)
+						from taking
+						where taking.studentnum = student.studentnum)));
 						
