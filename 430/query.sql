@@ -1,5 +1,3 @@
-select schedulenum, semester, avg(grade) as "avg Grade"
-from taking
-where schedulenum in (select schedulenum
-					  from class
-					  where num = 430 and department = 'CMPSCI');
+select name
+from student inner join taking on(studentnum)
+where department = 'CMPSCI' and num = '430';
