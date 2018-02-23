@@ -88,8 +88,20 @@ INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 127, 'Spr
 
 
 
-SELECT name
+SELECT *
 FROM Instructor;
+
+SELECT *
+FROM Class;
+
+SELECT *
+FROM Teaches;
+
+SELECT *
+FROM Student;
+
+SELECT *
+FROM Taking;
 
 DROP TABLE Taking;
 DROP TABLE Student;
