@@ -3,7 +3,7 @@ with test as
 	  from taking
 	  where semester = 'SPRING'
 	  group by studentnum)
-	select name, max(newcount)
+	select name, max(count)
 	from student,test
-	where newcount >= (select max(count)
+	where count >= (select max(count)
 						from test);
