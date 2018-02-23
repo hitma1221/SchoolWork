@@ -16,4 +16,4 @@ where studentnum in (select studentnum
 					from taking
 					where schedulenum in (select schedulenum
 						 				  from teaches
-						 				  where name != 'Linda Null' or name != 'Jeremy Blum')
+						 				  where name != 'Linda Null' or name != 'Jeremy Blum'));
