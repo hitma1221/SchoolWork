@@ -6,4 +6,4 @@ where schedulenum in ( select schedulenum
 						Intersect
 					select schedulenum
 					from teaches inner join Instructor on(teaches.name = Instructor.name)
-					where name = 'Linda Null' or name = 'Jeremy Blum');
+					where teaches.name = 'Linda Null' or teaches.name = 'Jeremy Blum');
