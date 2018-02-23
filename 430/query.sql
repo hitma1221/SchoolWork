@@ -1,6 +1,6 @@
 select studentnum
 from taking
-where schedulenum not in 
+where schedulenum in 
 					(select schedulenum
 					 from class
 					 where num = 430 and department = 'CMPSCI');
