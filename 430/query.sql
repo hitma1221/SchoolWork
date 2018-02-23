@@ -1,4 +1,4 @@
-select studentnum
-from max(select studentnum, count(schedulenum)
-		from taking
-		group by studentnum);
+select studentnum, max(count)
+from (select studentnum, count(schedulenum) as count
+	  from taking
+	  group by studentnum);
