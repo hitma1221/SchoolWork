@@ -2,12 +2,11 @@ CREATE TABLE Instructor(
 	name varchar(255),
 	department varchar(255),
 	office varchar(255),
-
 	PRIMARY KEY(name)
 );
 
 CREATE TABLE Class(
-	schedulenum varchar(255),
+	schedulenum int,
 	semester varchar(255),
 	department varchar(255),
 	num int,
@@ -15,15 +14,13 @@ CREATE TABLE Class(
 	time varchar(255),
 	place varchar(255),
 	enrollment varchar(255),
-
 	PRIMARY KEY(schedulenum, semester)
 );
 
 CREATE TABLE Teaches(
 	name varchar(255),
 	schedulenum int,
-	semester int,
-
+	semester varchar(255),
 	PRIMARY KEY(schedulenum, semester),
 	FOREIGN KEY(name) REFERENCES Instructor,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
@@ -34,24 +31,34 @@ CREATE TABLE Student(
 	name varchar(255),
 	standing int,
 	gpa int,
-
-	PRIMARY KEY(name, studentnum)
+	PRIMARY KEY(studentnum)
 );
 
 CREATE TABLE Taking(
-	studentnum varchar(255),
-	schedulenum varchar(255),
+	studentnum int,
+	schedulenum int,
 	semester varchar(255),
 	grade varchar(255),
-
-	PRIMARY KEY(studentnum, schedulenum, semester),
+	PRIMARY KEY(studentnum, semester),
 	FOREIGN KEY(studentnum) REFERENCES Student,
 	FOREIGN KEY(schedulenum, semester) REFERENCES Class
 );
 
+CREATE TABLE deans_list(
+	studentnum int,
+	semester varchar(255),
+	PRIMARY KEY(studentnum, semester),
+	FOREIGN KEY(studentnum) REFERENCES Student,
+	FOREIGN KEY(studentnum, semester) REFERENCES Taking
+);
 
-INSERT INTO Person(LastName,FirstName)
-VALUES('Holden','Josh');
+ALTER TABLE Student
+ADD address varchar(255);
 
-SELECT LastName
-FROM Person;
+DELETE FROM Student;
+
+INSERT INTO Instructor(name)
+VALUES('Blum');
+
+SELECT name
+FROM Instructor;
