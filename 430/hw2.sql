@@ -67,6 +67,25 @@ INSERT INTO Teaches(name, schedulenum, semester) VALUES('Sukmoon Chang', 127, 'S
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Linda Null', 125, 'Fall');
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Justin Keller', 124, 'Spring');
 
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(1, 'Joshua Holden', 8, 2.8);
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(2, 'Joseph Hernandez', 8, 3.3);
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(3, 'Jakub Grzegorgowski', 8, 3.5);
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(4, 'Neil Pasricha', 8, 2.9);
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(5, 'Abderrazzak Asmaayni', 8, 3.3);
+
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'Spring', 'A++');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 124, 'Spring', 'B');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 126, 'Spring', 'B+');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 127, 'Spring', 'A-');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 123, 'Spring', 'F');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 124, 'Spring', 'F');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 126, 'Spring', 'F+');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'Spring', 'C-');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spring', 'D');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'B+');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'C+');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 127, 'Spring', 'D-');
+
 
 
 SELECT name
