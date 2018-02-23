@@ -3,10 +3,10 @@ SELECT name
 				where studentnum in
 				(select studentnum
 					from taking
-					where schedulenum in 
+					where schedulenum not in 
 					(select schedulenum
 					 from class
-					 where num != 430 and department != 'CMPSCI'))
+					 where num = 430 and department = 'CMPSCI'))
 /*select name
 from student
 where EXISTS (SELECT name
