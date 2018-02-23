@@ -46,7 +46,13 @@ CREATE TABLE Taking(
 
 INSERT INTO Instructor(name, department, office)
 VALUES('Jeremy Blum', 'CMPSCI', 'W255'),
-VALUES('Sukmoon Chang', 'CMPSCI', 'W255');
+('Sukmoon Chang', 'CMPSCI', 'W255');
 
 SELECT name
 FROM Instructor;
+
+DROP TABLE Taking;
+DROP TABLE Student;
+DROP TABLE Teaches;
+DROP TABLE Class;
+DROP TABLE Instructor;
