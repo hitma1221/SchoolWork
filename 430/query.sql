@@ -1,8 +1,8 @@
 with test as 
-	(select studentnum, count(schedulenum)
+	(select studentnum, count(schedulenum)as classcount
 	  from taking
 	  where semester = 'Spring'
-	  group by studentnum)as classcount
+	  group by studentnum)
 	select name, max(classcount)
 	from student,test
 	where classcount >= (select max(classcount)
