@@ -1,3 +1,7 @@
+select schedulenum
+					 from class
+					 where num = 430 and department = 'CMPSCI';
+					 /*
 SELECT name
 				FROM Student stud
 				where studentnum in
@@ -7,6 +11,7 @@ SELECT name
 					(select schedulenum
 					 from class
 					 where num = 430 and department = 'CMPSCI'))
+					 */
 /*select name
 from student
 where EXISTS (SELECT name
