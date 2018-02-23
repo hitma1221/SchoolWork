@@ -1,9 +1,9 @@
 select name
 from student
 where EXISTS(
-SELECT name
-FROM Student stud
-where studentnum not in
+			SELECT name
+			FROM Student stud
+			where stud.studentnum not in
 				(
 				select studentnum
 				from taking
