@@ -70,7 +70,7 @@ INSERT INTO Teaches(name, schedulenum, semester) VALUES('Justin Keller', 124, 'S
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(1, 'Joshua Holden', 8, 2.8);
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(2, 'Joseph Hernandez', 8, 3.3);
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(3, 'Jakub Grzegorgowski', 8, 3.5);
-INSERT INTO Student(studentnum, name, standing, gpa) VALUES(4, 'Neil Pasricha', 8, 2.9);
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(4, 'Neil Pasricha', 7, 2.9);
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(5, 'Abderrazzak Asmaayni', 8, 3.3);
 
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'Spring', 'A++');
