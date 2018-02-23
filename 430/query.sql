@@ -1,4 +1,5 @@
-select studentnum, max(count)
+select studentnum
 from (select studentnum, count(schedulenum) as count
 	  from taking
-	  group by studentnum);
+	  group by studentnum)
+where max(count) = count;
