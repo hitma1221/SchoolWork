@@ -1,7 +1,7 @@
 with test as 
 	(select studentnum, count(schedulenum) as count
 	  from taking
-	  where semester = 'SPRING'
+	  where semester = 'Spring'
 	  group by studentnum)
 	select name, max(count)
 	from student,test
