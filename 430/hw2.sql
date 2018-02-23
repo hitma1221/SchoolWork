@@ -85,26 +85,10 @@ INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spr
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'B+');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'C+');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 127, 'Spring', 'D-');
-
-
-
-SELECT *
-FROM Instructor;
-
-SELECT *
-FROM Class;
-
-SELECT *
-FROM Teaches;
-
-SELECT *
-FROM Student;
-
-SELECT *
-FROM Taking;
-
+/*
 DROP TABLE Taking;
 DROP TABLE Student;
 DROP TABLE Teaches;
 DROP TABLE Class;
 DROP TABLE Instructor;
+*/
