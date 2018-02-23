@@ -53,6 +53,8 @@ INSERT INTO Instructor(name, department, office) VALUES('Justin Keller', 'Math',
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
 VALUES(123, 'Spring', 'CMPSCI', 430, 'T/Th', '1:35', 'EAB', 'Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
+VALUES(023, 'Fall', 'CMPSCI', 430, 'T/Th', '1:35', 'EAB', 'Enrolled');
+INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
 VALUES(124, 'Spring', 'MATH', 455, 'T/Th', '9:00', 'Olmstead', 'Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
 VALUES(125, 'Fall', 'BIO', 100, 'M/W/F', '1:25', 'EAB', ' Not Enrolled');
