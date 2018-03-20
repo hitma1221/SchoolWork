@@ -66,3 +66,15 @@ where schedulenum in (select schedulenum
 					  from class
 					  where num = 430 and department = 'CMPSCI')
 group by schedulenum, semester;
+/*PROBLEM K*/
+with test as 
+	(select studentnum, count(schedulenum)as classcount
+	  from taking
+	  where semester = 'Spring'
+	  group by studentnum)
+	select name, max(classcount)
+	from student, test
+	where classcount >= (select max(classcount)
+						from test)
+	and student.studentnum = test.studentnum
+	group by name;
