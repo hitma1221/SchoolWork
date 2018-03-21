@@ -26,20 +26,22 @@ CREATE TABLE Instructor(name varchar(30),
 	PRIMARY KEY(name));
 
 CREATE TABLE Teaches(name varchar(30),
-schedulenum integer,
-semester varchar(30),
-PRIMARY KEY (schedulenum,semester),
-foreign key(name) references instructor(name), 
-foreign key(schedulenum, semester) references class(schedulenum,
-semester));
+	schedulenum integer,
+	semester varchar(30),
+	PRIMARY KEY (schedulenum,semester),
+	foreign key(name) references instructor(name), 
+	foreign key(schedulenum, semester) references class(schedulenum,
+	semester
+));
 
 create table Taking(studentnum integer, 
-schedulenum integer, 
-semester varchar(30), 
-grade varchar(30),
-PRIMARY KEY(studentnum,schedulenum,semester),
-foreign key(studentnum) references student(studentnum), foreign key(schedulenum, semester) references class(schedulenum,
-semester));
+	schedulenum integer, 
+	semester varchar(30), 
+	grade varchar(30),
+	PRIMARY KEY(studentnum,schedulenum,semester),
+	foreign key(studentnum) references student(studentnum), foreign key(schedulenum, semester) references class(schedulenum,
+	semester
+));
 
 
 
@@ -90,4 +92,3 @@ INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spr
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'D');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'A');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'Spring', 'B');
-

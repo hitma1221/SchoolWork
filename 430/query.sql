@@ -1,0 +1,7 @@
+CREATE TRIGGER STUDENTREMOVER
+BEFORE DELETE ON Student
+FOR EACH ROW
+BEGIN
+	DELETE FROM Taking
+	WHERE Student.studentnum = Taking.studentnum
+END
