@@ -1,6 +1,9 @@
-create view report_card as
-	(select name, taking.semester, department, schedulenum, grade
-		from student inner join taking using(studentnum)
-		inner join class using (schedulenum)
-		where taking.semester = 'S18'
-		);
+delete from student
+	where EXISTS
+	(select *
+		from student inner join taking using(studentnum) innerSql
+		where innerSql.schedulenum = (select schedulenum
+										from class
+										where department = 'CMPSC' and num = 463)
+		and student.studentnum = innerSql.studentnum
+	);
