@@ -40,7 +40,7 @@ create table Taking(
 	schedulenum integer, 
 	semester varchar(30), 
 	grade varchar(30),
-	PRIMARY KEY(studentnum, schedulenum,semester),
+	PRIMARY KEY(studentnum, schedulenum, semester),
 	foreign key(studentnum) references student(studentnum) ON DELETE CASCADE, foreign key(schedulenum, semester) references class(schedulenum,
 	semester) ON DELETE CASCADE
 );
@@ -79,19 +79,4 @@ INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 126, 'S18
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Sukmoon Chang', 127, 'S18');
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Linda Null', 125, 'F18');
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Justin Keller', 124, 'S18');
-
-
-
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'S18', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 124, 'S18', 'B');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 126, 'S18', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 127, 'S18', 'C');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 123, 'S18', 'F');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 124, 'S18', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 126, 'S18', 'C');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'S18', 'B');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'S18', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'S18', 'D');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'S18', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'S18', 'B');
 
