@@ -1,4 +1,5 @@
-insert into taking(studentnum, schedulenum, semester)
-(select student.studentnum, class.schedulenum, class.semester
-from student, class
-where class.department = 'CMPSC' and class.semester = 'S18');
+create view report_card as
+	(select info.name, info.semester, info.department, schedulenum, grade
+		from studnet inner join taking using(studentnum) as info,
+		class
+		);

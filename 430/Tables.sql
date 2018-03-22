@@ -73,7 +73,6 @@ INSERT INTO Instructor(name, department, office) VALUES('Linda Null', 'CMPSC', '
 INSERT INTO Instructor(name, department, office) VALUES('Hyuntae Na', 'CMPSC', 'SEC');
 INSERT INTO Instructor(name, department, office) VALUES('Justin Keller', 'Math', 'Olmstead');
 
-
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 123, 'S18');
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 126, 'S18');
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Sukmoon Chang', 127, 'S18');
