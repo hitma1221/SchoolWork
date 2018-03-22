@@ -6,7 +6,8 @@ CREATE TABLE Student(
 	check (gpa>0.0), check (gpa<=4.00),
 	check(standing in('first year','sophomore','junior','senior')));
 
-CREATE TABLE Class(schedulenum integer,
+CREATE TABLE Class(
+	schedulenum integer,
 	semester varchar(30),
 	department varchar(30),
 	num int, 
@@ -34,11 +35,12 @@ CREATE TABLE Teaches(name varchar(30),
 	semester
 ));
 
-create table Taking(studentnum integer, 
+create table Taking(
+	studentnum integer, 
 	schedulenum integer, 
 	semester varchar(30), 
 	grade varchar(30),
-	PRIMARY KEY(studentnum,schedulenum,semester),
+	PRIMARY KEY(studentnum, schedulenum,semester),
 	foreign key(studentnum) references student(studentnum) ON DELETE CASCADE, foreign key(schedulenum, semester) ON DELETE CASCADE references class(schedulenum,
 	semester
 ));
@@ -53,17 +55,17 @@ INSERT INTO Student(studentnum, name, standing, gpa) VALUES(5, 'Abderrazzak Asma
 
 
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
-VALUES(123, 'Spring', 'CMPSC', 430, 'TuTh', '1', 'EAB', 'Enrolled');
+VALUES(123, 'S18', 'CMPSC', 430, 'TuTh', '1', 'EAB', 'Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
-VALUES(023, 'Fall', 'CMPSC', 430, 'TuTh', '1', 'EAB', 'Enrolled');
+VALUES(023, 'F18', 'CMPSC', 430, 'TuTh', '1', 'EAB', 'Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
-VALUES(124, 'Spring', 'MATH', 455, 'TuTh', '9', 'Olmstead', 'Enrolled');
+VALUES(124, 'S18', 'MATH', 455, 'TuTh', '9', 'Olmstead', 'Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
-VALUES(125, 'Fall', 'BIO', 100, 'MWF', '7', 'EAB', ' Not Enrolled');
+VALUES(125, 'F18', 'BIO', 100, 'MWF', '7', 'EAB', ' Not Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
-VALUES(126, 'Spring', 'CMPSC', 463, 'MWF', '6', 'SEC', 'Not Enrolled');
+VALUES(126, 'S18', 'CMPSC', 463, 'MWF', '6', 'SEC', 'Not Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
-VALUES(127, 'Spring', 'CMPSC', 460, 'MWF', '18', 'Olmstead', 'Enrolled');
+VALUES(127, 'S18', 'CMPSC', 460, 'MWF', '18', 'Olmstead', 'Enrolled');
 
 INSERT INTO Instructor(name, department, office) VALUES('Jeremy Blum', 'CMPSC', 'Olmstead');
 INSERT INTO Instructor(name, department, office) VALUES('Sukmoon Chang', 'CMPSC', 'Olmstead');
@@ -92,3 +94,4 @@ INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spr
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'D');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'A');
 INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'Spring', 'B');
+
