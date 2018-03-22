@@ -41,9 +41,9 @@ create table Taking(
 	semester varchar(30), 
 	grade varchar(30),
 	PRIMARY KEY(studentnum, schedulenum,semester),
-	foreign key(studentnum) references student(studentnum) ON DELETE CASCADE, foreign key(schedulenum, semester) ON DELETE CASCADE references class(schedulenum,
-	semester
-));
+	foreign key(studentnum) references student(studentnum) ON DELETE CASCADE, foreign key(schedulenum, semester) references class(schedulenum,
+	semester) ON DELETE CASCADE
+);
 
 
 
