@@ -74,24 +74,24 @@ INSERT INTO Instructor(name, department, office) VALUES('Hyuntae Na', 'CMPSC', '
 INSERT INTO Instructor(name, department, office) VALUES('Justin Keller', 'Math', 'Olmstead');
 
 
-INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 123, 'Spring');
-INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 126, 'Spring');
-INSERT INTO Teaches(name, schedulenum, semester) VALUES('Sukmoon Chang', 127, 'Spring');
-INSERT INTO Teaches(name, schedulenum, semester) VALUES('Linda Null', 125, 'Fall');
-INSERT INTO Teaches(name, schedulenum, semester) VALUES('Justin Keller', 124, 'Spring');
+INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 123, 'S18');
+INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 126, 'S18');
+INSERT INTO Teaches(name, schedulenum, semester) VALUES('Sukmoon Chang', 127, 'S18');
+INSERT INTO Teaches(name, schedulenum, semester) VALUES('Linda Null', 125, 'F18');
+INSERT INTO Teaches(name, schedulenum, semester) VALUES('Justin Keller', 124, 'S18');
 
 
 
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'Spring', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 124, 'Spring', 'B');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 126, 'Spring', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 127, 'Spring', 'C');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 123, 'Spring', 'F');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 124, 'Spring', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 126, 'Spring', 'C');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'Spring', 'B');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'Spring', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'Spring', 'D');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'Spring', 'A');
-INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'Spring', 'B');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 123, 'S18', 'A');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 124, 'S18', 'B');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 126, 'S18', 'A');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(1, 127, 'S18', 'C');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 123, 'S18', 'F');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 124, 'S18', 'A');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 126, 'S18', 'C');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(2, 127, 'S18', 'B');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 123, 'S18', 'A');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(4, 124, 'S18', 'D');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(3, 126, 'S18', 'A');
+INSERT INTO Taking(studentnum, schedulenum, semester, grade) VALUES(5, 124, 'S18', 'B');
 
