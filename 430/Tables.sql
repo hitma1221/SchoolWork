@@ -52,6 +52,7 @@ INSERT INTO Student(studentnum, name, standing, gpa) VALUES(2, 'Joseph Hernandez
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(3, 'Jakub Grzegorgowski', 'junior', 3.5);
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(4, 'Neil Pasricha', 'senior', 2.9);
 INSERT INTO Student(studentnum, name, standing, gpa) VALUES(5, 'Abderrazzak Asmaayni', 'senior', 3.5);
+INSERT INTO Student(studentnum, name, standing, gpa) VALUES(9, 'zak', 'senior', 3.5);
 
 
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
@@ -66,11 +67,14 @@ INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enr
 VALUES(126, 'S18', 'CMPSC', 463, 'MWF', '6', 'SEC', 'Not Enrolled');
 INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
 VALUES(127, 'S18', 'CMPSC', 460, 'MWF', '18', 'Olmstead', 'Enrolled');
+INSERT INTO Class(schedulenum, semester, department, num, days, time, place, enrollment) 
+VALUES(001, 'S18', 'BIO', 141, 'MWF', '3', 'Olmstead', 'Enrolled');
 
 INSERT INTO Instructor(name, department, office) VALUES('Jeremy Blum', 'CMPSC', 'Olmstead');
 INSERT INTO Instructor(name, department, office) VALUES('Sukmoon Chang', 'CMPSC', 'Olmstead');
 INSERT INTO Instructor(name, department, office) VALUES('Linda Null', 'CMPSC', 'EAB');
 INSERT INTO Instructor(name, department, office) VALUES('Hyuntae Na', 'CMPSC', 'SEC');
+INSERT INTO Instructor(name, department, office) VALUES('Naga not working here', 'MATH', 'SEC');
 INSERT INTO Instructor(name, department, office) VALUES('Justin Keller', 'Math', 'Olmstead');
 
 INSERT INTO Teaches(name, schedulenum, semester) VALUES('Jeremy Blum', 123, 'S18');

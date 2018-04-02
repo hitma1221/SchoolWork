@@ -1,0 +1,26 @@
+Create Layout prototype
+Create basic functionality of extension
+Create all buttons in main extenension
+Create basic functionality of buttons
+Create Styling for all buttons
+Create images and colors for background and google shortcut image
+Make buttons, displays of degree button
+Make buttons, displays of plan button
+Make buttons, displays of search button
+Make buttons, displays of course selection button
+Make help button
+Set up gpa display in degree button
+Set up current courses in degree audit
+Set up unfulfilled requirements in the degree audit
+Set up unused requirements in the degree audit
+Set up class search by Id of course
+Set up class search by requirement
+Set up plan button to select a plan from campus
+Select semester of plan to display
+Select major to display
+Display selected information for the user in a nice table
+Display link to navigate to full plan
+Set up classes to be saved from the search to the selection button
+Set up classes to recommend in the selection button
+Make functionality to delete or get more information from classes in the selection
+
