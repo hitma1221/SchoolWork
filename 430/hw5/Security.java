@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
-
 public class Security {
     public static void main(String[] args) throws Exception{
 
@@ -45,7 +44,7 @@ public class Security {
                 type = x;
             }
         }
-        
+
         if (accepted) {
             System.out.print("Column Value: ");
             columnValue = scan.nextLine();
